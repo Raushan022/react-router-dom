@@ -5,6 +5,8 @@ import Dashboard from "./components/Dashboard";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import ParamComp from "./components/ParamComp";
+import Courses from "./components/Courses";
+import Attendance from "./components/Attendance";
 
 function App() {
   const router = createBrowserRouter([
@@ -34,6 +36,16 @@ function App() {
           <Dashboard />
         </div>
       ),
+      children: [
+        {
+          path: "courses",
+          element: <Courses />,
+        },
+        {
+          path: "attendance",
+          element: <Attendance />,
+        },
+      ],
     },
     {
       path: "/student/:id",
