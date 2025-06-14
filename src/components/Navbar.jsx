@@ -1,14 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
+  //note: the difference between Link and NavLink is that you get a 'isActive' flag with NavLink
   return (
     <div>
       <ul>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/dashboard">Dashboard</Link>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
+          About
+        </NavLink>
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
+          Dashboard
+        </NavLink>
       </ul>
     </div>
   );

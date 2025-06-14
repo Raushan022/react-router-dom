@@ -4,5 +4,8 @@ ul {
    justify-content: space-between;
    padding-right: 10px;
    background-color: beige;
+}
 
+.active-link {
+   border: red 1px solid;
 }
