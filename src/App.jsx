@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import ParamComp from "./components/ParamComp";
 import Courses from "./components/Courses";
 import Attendance from "./components/Attendance";
+import NotFoundPage from "./components/NotFoundPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -55,6 +56,10 @@ function App() {
           <ParamComp />
         </div>
       ),
+    },
+    {
+      path: "*",
+      element: <NotFoundPage />,
     },
   ]);
   return (
